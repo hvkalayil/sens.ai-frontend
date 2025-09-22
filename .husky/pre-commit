@@ -1,0 +1,15 @@
+#!/bin/sh
+
+echo "🔍 Checking lint & format"
+if ! pnpm check; then
+    echo "Lint/Format has errors try running pnpm check:fix"
+    exit 1
+fi
+
+echo "🏗️ Checking build"
+if ! pnpm build;then
+    echo "Build failed. Check build errors by running pnpm build"
+    exit 1
+fi
+
+echo "✅ All checks passed. Ready for commit"

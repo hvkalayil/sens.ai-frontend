@@ -1,0 +1,23 @@
+node_modules
+.pnpm-store
+.vite
+
+# Build output
+/dist
+
+# VCS
+.git
+.gitignore
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.log
+
+# Env and local config
+.env
+.env.*
+*.local
+
+# Tests/coverage
+coverage
