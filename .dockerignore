@@ -14,10 +14,5 @@ node_modules
 Thumbs.db
 *.log
 
-# Env and local config
-.env
-.env.*
-*.local
-
 # Tests/coverage
 coverage
