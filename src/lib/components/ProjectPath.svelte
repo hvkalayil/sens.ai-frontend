@@ -1,12 +1,12 @@
 <script lang="ts">
 import { goto } from '$app/navigation';
 import { resolve } from '$app/paths';
-import { TYPE_OF_PATH } from '../constants';
+import { APPROACH_TYPE } from '../constants';
 import Button from './common/Button.svelte';
 const onClick = () => {
     goto(resolve('/approach/details'), {
         state: {
-            type: TYPE_OF_PATH.ProjectPath,
+            type: APPROACH_TYPE.ProjectApproach,
         },
     });
 };

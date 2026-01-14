@@ -1,4 +1,8 @@
-export const enum TYPE_OF_PATH {
-  ProjectPath = 'Project Path',
-  TechPath = 'Tech Path',
+export const enum APPROACH_TYPE {
+  ProjectApproach = 'Project Path',
+  TechApproach = 'Tech Path',
 }
+
+export const LOCAL_STORAGE = {
+  approachDetails: 'SENSAI_APPROACH_DETAILS',
+};
