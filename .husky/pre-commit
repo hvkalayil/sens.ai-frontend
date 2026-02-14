@@ -1,13 +1,19 @@
-#!/bin/sh
-
-echo "🔍 Checking lint & format"
-if ! pnpm check; then
-    echo "Lint/Format has errors try running pnpm check:fix"
+echo "🔍 Checking lint"
+if ! pnpm run lint; then
+    echo "Lint has errors try running pnpm lint:fix"
     exit 1
 fi
+echo "✅ Linting PASS"
+
+echo "✨ Checking format"
+if ! pnpm run format; then
+    echo "Format has errors try running pnpm format:fix"
+    exit 1
+fi
+echo "✅ Format PASS"
 
 echo "🏗️ Checking build"
-if ! pnpm build;then
+if ! pnpm run build;then
     echo "Build failed. Check build errors by running pnpm build"
     exit 1
 fi
