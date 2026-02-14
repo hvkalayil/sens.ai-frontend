@@ -16,11 +16,10 @@ RUN pnpm build
 FROM nginx:alpine AS runner
 
 # Copy built assets to Nginx html directory
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/build /usr/share/nginx/html
 
-# Remove default Nginx conf and add a minimal one (optional)
-# If you need SPA fallback, uncomment below and add the config
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Remove default Nginx conf and add a minimal one
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]

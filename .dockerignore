@@ -1,18 +1,38 @@
+# Dependencies
 node_modules
 .pnpm-store
-.vite
+.npm
+.yarn
 
 # Build output
-/dist
+.svelte-kit
+build
+dist
+.vite
+
+# Environment
+.env
+.env.*
+!.env.example
 
 # VCS
 .git
 .gitignore
+.husky
 
 # OS / editor junk
 .DS_Store
 Thumbs.db
 *.log
+.vscode
+.idea
 
 # Tests/coverage
 coverage
+playwright-report
+test-results
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose*
